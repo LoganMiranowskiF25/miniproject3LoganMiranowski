@@ -1,17 +1,36 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="text-center">
-        <h1 class="mb-3">Dashboard</h1>
-        <p class="lead">Welcome to your dashboard!</p>
+    <div class="container mb-4">
+        <h1 class="mb-4 text-center">Dashboard</h1>
 
         <div class="mt-4">
             <a href="/" class="btn btn-primary m-2">Home</a>
             <a href="/form" class="btn btn-warning m-2">Form Page</a>
         </div>
 
+        {%if posts %}
+            <div class="row">
+                {%for post in posts %}
+                    <div class="col-md-6 mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ post[0] }}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">By {{ post[1] }}</h6>
+                                <p class="card-text">{{ post[2] or "Anonymous"}}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p class="text-center">No posts available.</p>
+        {% endif %}
+
+
         <button class="btn btn-secondary mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Open Modal
         </button>
     </div>
+</div>
 {% endblock %}
