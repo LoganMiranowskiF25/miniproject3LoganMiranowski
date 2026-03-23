@@ -17,6 +17,9 @@
 
         <div class="container mt-4">
             {% block content %}{% endblock %}
+            <button class="bt btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Open Modal
+            </button>
         </div>
 
         <div class="modal fade" id="exampleModal" tabindex="-1">
@@ -27,7 +30,7 @@
                     </div>
                     
                     <div class="modal-body">
-                        This is a booststrap modal.
+                        This is a bootstrap modal.
                     </div>
                 </div>
             </div>
