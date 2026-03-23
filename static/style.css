@@ -1,0 +1,48 @@
+/* style.css */
+
+/* General body styling */
+body {
+    background-color: #d3d3d3; /* light gray */
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar tweaks */
+.navbar {
+    margin-bottom: 20px;
+}
+
+/* Header styling (h1, h2) */
+h1, h2 {
+    color: #343a40; /* dark gray */
+    text-align: center;
+}
+
+/* Buttons spacing — closer together */
+.btn {
+    margin: 2px; /* reduce spacing between buttons */
+    min-width: 100px;
+}
+
+/* Card styling for dashboard posts */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+/* Form input styling */
+.form-control {
+    border-radius: 5px;
+}
+
+/* Modal text styling */
+.modal-body {
+    font-size: 1rem;
+    color: #495057;
+}
